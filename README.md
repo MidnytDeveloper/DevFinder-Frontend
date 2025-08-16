@@ -2,7 +2,7 @@
 
 - Created a Vite + React
 
-- install tailwind
+<!-- - install tailwind -->
 
 - go to tailwind document and in document(https://v3.tailwindcss.com/docs/guides/vite)
   --> Using React
@@ -32,3 +32,22 @@ paste :
  @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+<!-- DAISY UI -->
+
+command to install -
+npm i -D daisyui@latest
+
+go to tailwinf.config.js and replace old code with new one:
+
+import daisyui from "daisyui";
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [daisyui],
+};
